@@ -1,0 +1,3 @@
+watchdog
+splunk-hec-handler
+ordered-set
