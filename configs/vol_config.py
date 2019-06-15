@@ -7,7 +7,7 @@ elif sys.platform == 'linux':
     VOLATILITY_PATH = Path(r'/usr/bin/volatility')
 elif sys.platform == 'win32':
     VOLATILITY_PATH = Path.joinpath(Path(__file__).resolve().parents[1],
-                                    "contrib", "volatility_2.6_win64_standalone.exe").as_posix()
+                                    "contrib", "volatility_2.6_win64_standalone.exe")
 else:
     raise OSError
 
