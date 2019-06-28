@@ -36,7 +36,7 @@ Create and activate a new Python virtual environment (optional, but recommended)
 
 Check out or unzip the code
 ```
-> git clone https://pig.abbvienet.com/cti/volatility-automation.git
+> git clone https://github.com/vavarachen/volatility_automation.git
 ```
 
 Install project dependencies (Python modules) using the 'requirements.txt' file in project root folder.
