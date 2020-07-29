@@ -6,12 +6,14 @@ import subprocess
 import shlex
 from shutil import copyfileobj
 
+
 def which(cmd):
-    paths=os.getenv('PATH')
+    paths = os.getenv('PATH')
     for path in paths.split(os.path.pathsep):
-        cmd_path=os.path.join(path,cmd)
+        cmd_path = os.path.join(path,cmd)
         if os.path.exists(cmd_path) and os.access(cmd_path,os.X_OK):
             return cmd_path
+
 
 def get_mactime_cmd(mactime_path=None):
     if mactime_path is not None and os.path.exists(mactime_path) and os.access(mactime_path,os.X_OK):

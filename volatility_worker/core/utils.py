@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import logging
 import sys
 import shutil
@@ -157,8 +156,8 @@ def run_command(args, **kwargs):
                               shell=kwargs.get('shell', False),
                               stdout=subprocess.PIPE,
                               stderr=subprocess.PIPE,
-                              encoding=kwargs.get('encoding','utf-8'),
-                              errors=kwargs.get('errors','replace'),
+                              encoding=kwargs.get('encoding', 'utf-8'),
+                              errors=kwargs.get('errors', 'replace'),
                               timeout=kwargs.get('timeout', 300),
                               check=kwargs.get('check', True)
                               )

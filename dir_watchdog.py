@@ -1,7 +1,6 @@
+# -*- coding: utf-8 -*-
 import time
 from pathlib import Path
-import sys
-sys.path.append(Path(__file__).resolve().parents[1].as_posix())
 from datetime import datetime
 from watchdog.observers import Observer
 from watchdog.events import PatternMatchingEventHandler
@@ -19,7 +18,7 @@ logger = set_default_logger('root')
 _format = "%(asctime)s  %(levelname)s  %(module)s  %(message)s"
 add_logger_streamhandler(logger, logger_level=log_level, log_format=_format)
 
-DEFAULT_LOG = Path.joinpath(Path(__file__).resolve().parents[1],
+DEFAULT_LOG = Path.joinpath(Path(__file__).resolve().parents[0],
                             "logs", "default-%s.log" % datetime.now().strftime("%Y-%m-%d"))
 add_logger_filehandler(logger, logger_level="DEBUG", filename=DEFAULT_LOG.as_posix(), log_format=_format)
 
